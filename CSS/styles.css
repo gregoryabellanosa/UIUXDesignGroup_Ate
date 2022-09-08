@@ -49,24 +49,22 @@ nav li {
   font-size: 1.3rem;
   text-align: center;
 }
-
-nav .logo {
+nav nav .logo {
   flex-basis: 100%;
   text-align: center;
 }
-nav .logo img {
+nav nav .logo img {
   max-width: 150px;
 }
-nav .logo:hover {
+nav nav .logo:hover {
   background-color: #082B59;
 }
-
-nav a {
+nav nav a {
   color: #ffffff;
   text-decoration: none;
   display: block;
 }
-nav a:hover {
+nav nav a:hover {
   background-color: rgb(23, 117, 0);
 }
 

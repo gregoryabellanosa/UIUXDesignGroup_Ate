@@ -62,29 +62,29 @@ html {
       font-size: 1.3rem;
       text-align: center;
     }
-}
   
-nav .logo {
-      flex-basis: 100%;
-      text-align: center;
+    nav .logo {
+          flex-basis: 100%;
+          text-align: center;
 
-    img {
-      max-width: 150px;
+        img {
+          max-width: 150px;
+        }
+      
+        &:hover {
+          background-color: $navy-blue;
+        }
     }
-  
-    &:hover {
-      background-color: $navy-blue;
-    }
-}
 
-  nav a {
-      color: $white;
-      text-decoration: none;
-      display: block;
-  
-    &:hover {
-      background-color:$primary-color;
-  }
+      nav a {
+          color: $white;
+          text-decoration: none;
+          display: block;
+      
+        &:hover {
+          background-color:$primary-color;
+      }
+    }
 }
 
   .main-bkgd {
