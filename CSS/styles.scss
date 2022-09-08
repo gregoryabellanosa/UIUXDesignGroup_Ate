@@ -74,7 +74,7 @@ html {
     display: block;
   }
   nav a:hover {
-    background-color:complement($primary-color);
+    background-color:$primary-color;
   }
   .main-bkgd {
     background: $white url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
