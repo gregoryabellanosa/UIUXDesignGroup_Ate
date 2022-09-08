@@ -38,44 +38,55 @@ html {
     border-radius: 10px;
   }
   a {
-    color: $brown;
+      color: $brown;
+
+      &:hover {
+        text-decoration: none;
+    }
   }
-  a:hover {
-    text-decoration: none;
-  }
+
   header {
     border-bottom: 10px solid $orange;
   }
-  nav ul {
-    @include noSpace();
-    list-style-type: none;
-    display: grid;
-    /* flex-flow: row wrap; */
-    grid-template-columns: 1fr;
-  }
-  nav li {
-    margin: 0 1rem 1rem 1rem;
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  nav .logo img {
-    max-width: 150px;
-  }
-  nav .logo {
-    flex-basis: 100%;
-    text-align: center;
-  }
-  nav .logo:hover {
-    background-color: $navy-blue;
-  }
+
+  nav{
+    ul {
+      @include noSpace();
+      list-style-type: none;
+      display: grid;
+      /* flex-flow: row wrap; */
+      grid-template-columns: 1fr;
+    }
+    li {
+      margin: 0 1rem 1rem 1rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+}
+  
+nav .logo {
+      flex-basis: 100%;
+      text-align: center;
+
+    img {
+      max-width: 150px;
+    }
+  
+    &:hover {
+      background-color: $navy-blue;
+    }
+}
+
   nav a {
-    color: $white;
-    text-decoration: none;
-    display: block;
+      color: $white;
+      text-decoration: none;
+      display: block;
+  
+    &:hover {
+      background-color:$primary-color;
   }
-  nav a:hover {
-    background-color:$primary-color;
-  }
+}
+
   .main-bkgd {
     background: $white url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
     padding-bottom: 300px;
@@ -129,30 +140,33 @@ html {
     } 
   }
   @media (min-width: 992px) {
-    nav ul {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 90%;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      align-items: center;
-    }
-    nav li {
-      margin: 0;
-    }
-    nav .logo {
-      grid-column: 1/2;
-      padding: 1rem;
-    }
-    nav .menu-about {
-      grid-column: 4/5;
-    }
-    nav .menu-products {
-      grid-column: 5/6;
-    }
-    nav .menu-contact {
-      grid-column: 6/7;
-    }
+    
+    nav{
+      ul {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+      }
+      li {
+        margin: 0;
+      }
+      .logo {
+        grid-column: 1/2;
+        padding: 1rem;
+      }
+      .menu-about {
+        grid-column: 4/5;
+      }
+      .menu-products {
+        grid-column: 5/6;
+      }
+      .menu-contact {
+        grid-column: 6/7;
+      }
+  }
     .main {
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -175,34 +189,37 @@ html {
   }
 
   .button {
-    display: inline-block;
-    background-color: $brown;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    margin: 0;
-    color: $white;
-    text-decoration: none;
-    border: 2px solid $brown;
-  }
-  .button:hover {
-    background-color: $white;
-    color: $brown;
-  }
+      display: inline-block;
+      background-color: $brown;
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      color: $white;
+      text-decoration: none;
+      border: 2px solid $brown;
+    
+    &:hover {
+      background-color: $white;
+      color: $brown;
+    }
+}
+
   footer {
-    color: $white;
-    text-align: center;
-    border-top: 10px solid $orange;
-  }
-  footer ul {
-    list-style-type: none;
-    @include noSpace();
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-  footer a {
-    color: $white;
-    font-size: 2rem;
-    display: block;
-    margin: 0 1rem 3rem 1rem;
-  }
+      color: $white;
+      text-align: center;
+      border-top: 10px solid $orange;
+    
+    ul {
+      list-style-type: none;
+      @include noSpace();
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    a {
+      color: $white;
+      font-size: 2rem;
+      display: block;
+      margin: 0 1rem 3rem 1rem;
+    }
+}
