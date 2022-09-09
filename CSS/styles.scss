@@ -103,7 +103,7 @@ html {
     justify-content: space-between;
   }
   .container {
-    @include nospace(0 auto, 2rem)
+    @include nospace(0 auto, 2rem);
     @include maxwidth;
     @include flexrowrap();
     justify-content: space-between;
@@ -167,17 +167,17 @@ html {
         @include flexrowrap();
     }
     .card1, .card3 {
-        @include standardDesktopCardLayout()
+        @include standardDesktopCardLayout();
         @include flexrowrap;
     }
     .card2 {
-        @include standardDesktopCardLayout()
+        @include standardDesktopCardLayout();
         @include flexrowrap(flex, row wrap-reverse);
     }
   }
 
   .button {
-    @include nospace(0, 0.5rem 1rem)
+    @include nospace(0, 0.5rem 1rem);
     display: inline-block;
     background-color: $brown;
     border-radius: 10px;
