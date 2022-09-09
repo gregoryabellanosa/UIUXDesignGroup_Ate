@@ -36,7 +36,7 @@ html {
     box-sizing: inherit;
   }
   body {
-    @include nonspace;
+    @include nospace;
     background-color: $navy-blue;
     font-family: 'Lato', sans-serif;
     line-height: 2;
