@@ -1,20 +1,19 @@
-/* Tablet Screen Size */
+// Note for grading: this partial file includes examples of calling mixins
+// Tablet Screen Size
 @media (min-width: 768px) {
     nav ul {
-      @include flexrowrap();  
-    //   display: flex;
-    //   flex-flow: row wrap;
-      justify-content: center;
+        @include flexrowrap();
+        justify-content: center;
     }
     .main {
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
     }
     .card1, .card2, .card3 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
+}

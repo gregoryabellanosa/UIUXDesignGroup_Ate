@@ -1,22 +1,19 @@
+// Note for grading: this partial file shows examples of mixins with/without the usage of arguments
 @mixin nospace {
     margin: 0;
     padding: 0;
 }
-
-@mixin standardDesktopCardLayout{
-    flex-basis: 30%;
-    border-radius: 10px;
+@mixin standardDesktopCardLayout($flexpercent, $borderradius) {
+    flex-basis: $flexpercent;
+    border-radius: $borderradius;
 }
-
-@mixin maxwidth{
-    max-width: 1200px;
+@mixin maxwidth {
+    max-width: $max-width;
 }
-
 @mixin flexrowrap {
     display: flex;
     flex-flow: row wrap;
 }
-
 @mixin griddisplay {
     display: grid;
     grid-template-columns: 1fr;    

@@ -1,105 +1,53 @@
+// Note for grading: this partial file includes examples of calling mixins, using variables, and nesting
 html {
     box-sizing: border-box;
-  }
-  
-  *, *::before, *::after {
+}
+*, *::before, *::after {
     box-sizing: inherit;
-  }
-  
-  body {
-    background-color: $navy-blue;
+}
+body {
     @include nospace();
-    // margin: 0;
-    // padding: 0;
-    font-family: "Lato", sans-serif;
+    background-color: $navy-blue;
+    font-family: $body-font;
     line-height: 2;
-  }
-  
-  h1, h2, h3 {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  img, source {
-    width: 100%;
+}
+h1, h2, h3 {
+    font-family: $header-font;
+}
+img, source {
     @include maxwidth();
-    // max-width: 1200px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-  }
-  
-  a {
-    color: brown;
-  }
-  
-  a:hover {
+}
+a {
+    color: $brown;
+}
+a:hover {
     text-decoration: none;
-  }
-  
-  header {
+}
+header {
     border-bottom: 10px solid $orange;
-  }
-  
-//   regular nav styling start here
-//   nav ul {
-//     padding: 0;
-//     margin: 0;
-//     list-style-type: none;
-//     display: grid;
-//     /* flex-flow: row wrap; */
-//     grid-template-columns: 1fr;
-//   }
-  
-//   nav li {
-//     margin: 0 1rem 1rem 1rem;
-//     font-size: 1.3rem;
-//     text-align: center;
-//   }
-  
-//   nav .logo img {
-//     max-width: 150px;
-//   }
-  
-//   nav .logo {
-//     flex-basis: 100%;
-//     text-align: center;
-//   }
-  
-//   nav .logo:hover {
-//     background-color: $navy-blue;
-//   }
-  
-//   nav a {
-//     color: $white;
-//     text-decoration: none;
-//     display: block;
-//   }
-  
-//   nav a:hover {
-//     color: $orange;
-//   }
-
-//   nesting start here
+}
 nav {
     ul {
-      @include nospace();
-      @include griddisplay();
-      list-style-type: none;
-    //   display: grid;
-    //   grid-template-columns: 1fr;
+        @include nospace();
+        @include griddisplay();
+        list-style-type: none;
     }
     li {
-      margin: 0 1rem 1rem 1rem;
-      font-size: 1.3rem;
-      text-align: center;
+        margin: 0 1rem 1rem 1rem;
+        font-size: 1.3rem;
+        text-align: center;
     }
     .logo {
         flex-basis: 100%;
         text-align: center;
         img {
-        max-width: 150px;
+            max-width: 150px;
         }
         &:hover {
-          background-color: $navy-blue;
+            background-color: $navy-blue;
         }
     }
     a {
@@ -107,54 +55,41 @@ nav {
         text-decoration: none;
         display: block;
         &:hover {
-          color:$orange;
+            color:$orange;
         }
     }
-  }
-  
-  .main-bkgd {
+}
+.main-bkgd {
     background: $white url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
     padding-bottom: 300px;
-  }
-  
-  .main-bkgd h1 {
+}
+.main-bkgd h1 {
     flex-basis: 100%;
-  }
-  
-  .main {
+}
+.main {
     @include maxwidth();
-    // max-width: 1200px;
+    @include griddisplay();
     margin: 0 auto;
     padding: 2rem;
-    @include griddisplay();
-    // display: grid;
-    // grid-template-columns: 1fr;
     gap: 1rem;
     justify-content: space-between;
-  }
-  
-  .container {
+}
+.container {
     @include maxwidth();
-    // max-width: 1200px;
+    @include flexrowrap();
     margin: 0 auto;
     padding: 2rem;
-    @include flexrowrap();
-    // display: flex;
-    // flex-flow: row wrap;
     justify-content: space-between;
     gap: 2rem;
-  }
-  
-  .card1, .card2, .card3 {
+}
+.card1, .card2, .card3 {
     flex-basis: 100%;
     border-radius: 10px;
-  }
-  
-  .carddesc {
-    padding: 1rem;
-  }
-  
-  .button {
+}
+.carddesc {
+    padding: 1rem; 
+}
+.button {
     display: inline-block;
     background-color: $brown;
     border-radius: 10px;
@@ -163,33 +98,25 @@ nav {
     color: $white;
     text-decoration: none;
     border: 2px solid $brown;
-  }
-  
-  .button:hover {
+}
+.button:hover {
     background-color: $white;
     color: $brown;
-  }
-  
-  footer {
+}
+footer {
     color: $white;
     text-align: center;
     border-top: 10px solid $orange;
-  }
-  
-  footer ul {
-    list-style-type: none;
+}
+footer ul {
     @include nospace();
-    // padding: 0;
-    // margin: 0;
     @include flexrowrap();
-    // display: flex;
-    // flex-flow: row wrap;
+    list-style-type: none;
     justify-content: center;
-  }
-  
-  footer a {
-    color: #f2f2f2;
+}
+footer a {
+    color: $white;
     font-size: 2rem;
     display: block;
     margin: 0 1rem 3rem 1rem;
-  }/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
