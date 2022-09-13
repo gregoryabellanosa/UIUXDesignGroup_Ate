@@ -1,0 +1,23 @@
+@mixin nospace {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin standardDesktopCardLayout{
+    flex-basis: 30%;
+    border-radius: 10px;
+}
+
+@mixin maxwidth{
+    max-width: 1200px;
+}
+
+@mixin flexrowrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@mixin griddisplay {
+    display: grid;
+    grid-template-columns: 1fr;    
+}

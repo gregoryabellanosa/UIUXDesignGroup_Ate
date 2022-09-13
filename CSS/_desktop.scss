@@ -1,0 +1,52 @@
+//   Desktop Screen Size
+@media (min-width: 992px) {
+    nav ul {
+      @include maxwidth();  
+    //   max-width: 1200px;
+      margin: 0 auto;
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+    }
+    nav li {
+      margin: 0;
+    }
+    nav .logo {
+      grid-column: 1/2;
+      padding: 1rem;
+    }
+    nav .menu-about {
+      grid-column: 4/5;
+    }
+    nav .menu-products {
+      grid-column: 5/6;
+    }
+    nav .menu-contact {
+      grid-column: 6/7;
+    }
+    .main {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding-top: 2rem;
+    }
+    .container {
+      @include flexrowrap();  
+    //   display: flex;
+    //   flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    .card1, .card3 {
+      @include standardDesktopCardLayout();
+    //   flex-basis: 30%;
+    //   border-radius: 10px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .card2 {
+      flex-basis: 30%;
+      display: flex;
+      flex-flow: row wrap-reverse;
+      border-radius: 10px;
+    }
+  }
